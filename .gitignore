@@ -1,2 +1,25 @@
 .vscode/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+*.log
+error_log
+access_log
+.sass-cache
+
+local-config.php
+wp-config.php
+node_modules
+
+
+
+
+
+
 
