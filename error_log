@@ -1,0 +1,1 @@
+[04-May-2022 10:23:12 UTC] PHP Fatal error:  Cannot redeclare shm_load_textdomain_mofile() (previously declared in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-master/shmapper.php:66) in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/shmapper.php on line 66

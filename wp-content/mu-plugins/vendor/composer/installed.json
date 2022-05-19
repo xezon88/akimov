@@ -1,0 +1,239 @@
+{
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v2.1.1",
+            "version_normalized": "2.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "af93ba6e52236418f07a278033eba6959ee5b983"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/af93ba6e52236418f07a278033eba6959ee5b983",
+                "reference": "af93ba6e52236418f07a278033eba6959ee5b983",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.6.* || ^2.0",
+                "composer/semver": "^1 || ^3",
+                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "symfony/phpunit-bridge": "^5.3",
+                "symfony/process": "^5"
+            },
+            "time": "2022-04-13T09:13:00+00:00",
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                },
+                "plugin-modifies-install-path": true
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "MantisBT",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Starbug",
+                "Thelia",
+                "Whmcs",
+                "WolfCMS",
+                "agl",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "known",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "mediawiki",
+                "miaoxing",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "pantheon",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "processwire",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "sylius",
+                "tastyigniter",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v2.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "./installers"
+        },
+        {
+            "name": "underpin/debug-bar-extension",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Underpin-WP/debug-bar-extension.git",
+                "reference": "c96507c9468865dd5237a67903a4552c9aaafe7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Underpin-WP/debug-bar-extension/zipball/c96507c9468865dd5237a67903a4552c9aaafe7b",
+                "reference": "c96507c9468865dd5237a67903a4552c9aaafe7b",
+                "shasum": ""
+            },
+            "time": "2021-12-01T13:11:29+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "debug-bar.php"
+                ],
+                "psr-4": {
+                    "Underpin\\Debug_Bar_Extension\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Standiford",
+                    "email": "a@alexstandiford.com"
+                }
+            ],
+            "description": "Extension to integrate Debug Bar in Underpin",
+            "support": {
+                "issues": "https://github.com/Underpin-WP/debug-bar-extension/issues",
+                "source": "https://github.com/Underpin-WP/debug-bar-extension/tree/1.1.0"
+            },
+            "install-path": "../underpin/debug-bar-extension"
+        },
+        {
+            "name": "underpin/underpin",
+            "version": "2.1.0",
+            "version_normalized": "2.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Underpin-WP/underpin.git",
+                "reference": "ad037623b2ccc3f338590ec9adc6c278df1fbe5d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Underpin-WP/underpin/zipball/ad037623b2ccc3f338590ec9adc6c278df1fbe5d",
+                "reference": "ad037623b2ccc3f338590ec9adc6c278df1fbe5d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.1"
+            },
+            "time": "2022-03-25T10:51:13+00:00",
+            "type": "wordpress-muplugin",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Underpin\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Standiford",
+                    "email": "a@alexstandiford.com"
+                }
+            ],
+            "description": "Underpin WordPress framework",
+            "support": {
+                "issues": "https://github.com/Underpin-WP/underpin/issues",
+                "source": "https://github.com/Underpin-WP/underpin/tree/2.1.0"
+            },
+            "install-path": "../underpin/underpin"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

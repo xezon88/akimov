@@ -1,0 +1,62 @@
+[04-May-2022 09:00:54 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:00:54 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 09:00:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 09:00:58 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:00:58 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 09:00:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 09:01:43 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:01:43 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 09:01:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 09:27:01 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:27:01 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 09:27:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 09:34:47 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:34:47 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 09:34:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 09:34:49 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:34:49 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 09:34:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 09:34:54 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:57:40 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 09:57:40 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 09:57:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 10:01:46 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97
+[04-May-2022 10:01:48 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97
+[04-May-2022 10:09:06 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97
+[04-May-2022 10:09:07 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97
+[04-May-2022 10:10:46 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 10:10:54 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 10:10:54 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 10:10:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 10:10:56 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 10:11:01 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 10:11:01 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 10:11:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 10:20:32 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-master/class/ShMapperRequest.class.php on line 97
+[04-May-2022 10:20:33 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-master/class/ShMapperRequest.class.php on line 97
+[04-May-2022 11:10:54 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97
+[04-May-2022 11:10:55 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97
+[04-May-2022 11:14:32 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 11:14:32 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 11:14:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 11:14:32 UTC] PHP Warning:  _() expects exactly 1 parameter, 2 given in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 120
+[04-May-2022 11:15:41 UTC] PHP Warning:  file_get_contents(https://docs.google.com/spreadsheets/u/0/d//export?format=csv&amp;id=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/assets/google-sheets/google-sheets.php on line 10
+[04-May-2022 11:15:41 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 133
+[04-May-2022 11:15:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 138
+[04-May-2022 11:15:41 UTC] PHP Warning:  _() expects exactly 1 parameter, 2 given in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperDrive_ajax.class.php on line 120
+[04-May-2022 11:31:12 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97
+[04-May-2022 11:31:14 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/okakimov/avito360.ru/wp-content/plugins/shmapper-by-teplitsa/class/ShMapperRequest.class.php on line 97

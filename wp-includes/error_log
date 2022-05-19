@@ -1,0 +1,16 @@
+[04-May-2022 20:59:26 Europe/Kiev] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[04-May-2022 20:59:26 Europe/Kiev] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[04-May-2022 20:59:26 Europe/Kiev] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[04-May-2022 20:59:26 Europe/Kiev] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[04-May-2022 21:00:21 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/okakimov/avito360.ru/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/okakimov/avito360.ru/wp-includes/template-canvas.php on line 12
+[06-May-2022 14:38:12 Europe/Kiev] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[06-May-2022 14:38:12 Europe/Kiev] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[06-May-2022 14:38:12 Europe/Kiev] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[06-May-2022 14:38:12 Europe/Kiev] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/okakimov/avito360.ru/wp-includes/class-wp-http.php on line 11
+[06-May-2022 14:38:48 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/okakimov/avito360.ru/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/okakimov/avito360.ru/wp-includes/template-canvas.php on line 12
