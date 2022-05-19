@@ -225,9 +225,7 @@ class Akimov_RealEstate
         wp_nonce_field('real_estate_nonce', 'real_estate_nonce_field');
 
         //collect variables
-        // $real_estate_phone = get_post_meta($post->ID, 'real_estate_phone', true);
-        // $real_estate_description = get_post_meta($post->ID, 'real_estate_description', true);
-        // $real_estate_address = get_post_meta($post->ID, 'real_estate_address', true);
+        
 
 
 
@@ -415,26 +413,6 @@ class Akimov_RealEstate
             </div>
 
 
-
-
-            <?php
-
-            //trading hours
-            // if(!empty($this->wp_location_trading_hour_days)){
-            //     echo '<div class="field">';
-            //         echo '<label>Trading Hours </label>';
-            //         echo '<small> Trading hours for the location (e.g 9am - 5pm) </small>';
-            //         //go through all of our registered trading hour days
-            //         foreach($this->wp_location_trading_hour_days as $day_key => $day_value){
-            //             //collect trading hour meta data
-            //             $wp_location_trading_hour_value =  get_post_meta($post->ID,'wp_location_trading_hours_' . $day_key, true);
-            //             //dsiplay label and input
-            //             echo '<label for="wp_location_trading_hours_' . $day_key . '">' . $day_key . '</label>';
-            //             echo '<input type="text" name="wp_location_trading_hours_' . $day_key . '" id="wp_location_trading_hours_' . $day_key . '" value="' . $wp_location_trading_hour_value . '"/>';
-            //         }
-            //     echo '</div>';
-            // }       
-            ?>
             <?php
             //after main form elementst hook
             do_action('real_estate_admin_form_end');
@@ -579,18 +557,6 @@ class Akimov_RealEstate
         }
     }
 
-    public function map_meta_callback($post_id)
-    {
-
-        // print_r($array);
-        // var_dump($post_id);
-
-
-
-        ///$city = get_post_taxonomies($post_id);
-        // var_dump($city) . '</br>';
-       
-    }
 
     public function create_post()
     {
@@ -668,19 +634,11 @@ class Akimov_RealEstate
 
             $post_data = array(
 
-                //'post_content'   => <the text of the post>,                                        // Полный текст записи.
-                //'post_date'      => $arr[0],                                                   // Время, когда запись была создана.
-                //  'post_name'      => $_POST[$arr[19]],                                                    // Альтернативное название записи (slug) будет использовано в УРЛе.
-                //'post_parent'    => <post ID>,                                                     // ID родительской записи, если нужно.
-
-                // Пароль для просмотра записи.
+                
                 'post_status'    =>  'publish',         // Статус создаваемой записи.
                 'post_title'     => $real_estate_obj_address,                                                   // Заголовок (название) записи.
                 'post_type'      =>  'real_estate', // Тип записи.
-                //'post_category'  => array( <category id>, <...> ),                                  // Категория к которой относится пост (указываем ярлыки, имена или ID).
-                //'tags_input'     => array( <tag>, <tag>, <...> ),                                  // Метки поста (указываем ярлыки, имена или ID).
-                //'tax_input'      => array( 'taxonomy_name' => array( 'term', 'term2', 'term3' ) ), // К каким таксам прикрепить запись (указываем ярлыки, имена или ID).
-                //'to_ping'        => ?,                                                             //?
+                
                 'meta_input'     => [
                     'real_estate_obj_time' => $arr[0],
                     'real_estate_obj_id' => $arr[1],
