@@ -26,7 +26,7 @@ a<?php
  * @package    Akimov
  * @subpackage Akimov/includes
  * @author     xezon <@xezon>
- */
+ */ /*
 class Akimov_DB {
     /*
     [0] => Отметка времени 
@@ -57,7 +57,7 @@ class Akimov_DB {
     [25] => Главное фото 
     [26] => Ссылка youtube 
     [27] => Анент 
-    */
+   
 }
 
 $real_estate_obj_time = $arr[0];
@@ -119,4 +119,4 @@ $real_estate_obj_kontakts = $arr[27];
 'real_estate_obj_general_foto' = $arr[24],
 'real_estate_obj_link_youtube' = $arr[25],
 'real_estate_obj_agent' = $arr[26],
-'real_estate_obj_kontakts' = $arr[27],
+'real_estate_obj_kontakts' = $arr[27],*/
