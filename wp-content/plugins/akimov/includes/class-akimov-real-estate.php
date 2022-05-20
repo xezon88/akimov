@@ -225,7 +225,7 @@ class Akimov_RealEstate
         wp_nonce_field('real_estate_nonce', 'real_estate_nonce_field');
 
         //collect variables
-        
+
 
 
 
@@ -634,11 +634,11 @@ class Akimov_RealEstate
 
             $post_data = array(
 
-                
+
                 'post_status'    =>  'publish',         // Статус создаваемой записи.
                 'post_title'     => $real_estate_obj_address,                                                   // Заголовок (название) записи.
                 'post_type'      =>  'real_estate', // Тип записи.
-                
+
                 'meta_input'     => [
                     'real_estate_obj_time' => $arr[0],
                     'real_estate_obj_id' => $arr[1],
@@ -710,17 +710,21 @@ class Akimov_RealEstate
 
         //output
         $html = '';
+        $data = array();
+        $i = 0;
         $locations = get_posts($real_estate_args);
         //if we have locations 
         if ($locations) {
-            $html .= '<article class="location_list cf">';
+            // $html .= '<article class="location_list cf">';
             //foreach location
             foreach ($locations as $location) {
-                $html .= '<section class="location">';
+
+                //$html .= '<section class="location">';
                 //collect location data
                 $real_estate_id = $location->ID;
                 $real_estate_title = get_the_title($real_estate_id);
-                $real_estate_thumbnail = get_the_post_thumbnail($real_estate_id, 'thumbnail');
+                
+                $real_estate_thumbnail = get_the_post_thumbnail_url($real_estate_id);
                 $real_estate_content = apply_filters('the_content', $location->post_content);
                 if (!empty($real_estate_content)) {
                     $real_estate_content = strip_shortcodes(wp_trim_words($real_estate_content, 40, '...'));
@@ -734,101 +738,127 @@ class Akimov_RealEstate
                 $html = apply_filters('real_estate_before_main_content', $html);
 
                 //title
-                $html .= '<h2 class="title">';
-                $html .= '<a href="' . $real_estate_permalink . '" title="view location">';
-                $html .= $real_estate_title;
-                $html .= '</a>';
-                $html .= '</h2>';
+                // $html .= '<h2 class="title">';
+                // $html .= '<a href="' . $real_estate_permalink . '" title="view location">';
+                // $html .= $real_estate_title;
+                // $html .= '</a>';
+                // $html .= '</h2>';
+                $data[$i] =  ([
+                    'name' => $real_estate_title,
+                    'lat' => get_post_meta($real_estate_id, 'real_estate_obj_lat', true),
+                    'lon' => get_post_meta($real_estate_id, 'real_estate_obj_long', true),
+                    'thumbnail' => $real_estate_thumbnail,
+                    'type' => get_post_meta($real_estate_id, 'real_estate_obj_type', true),
+                    'dest' => get_post_meta($real_estate_id, 'real_estate_obj_dest', true),
+                    'floor' => get_post_meta($real_estate_id, 'real_estate_obj_floor', true),
+                    'resale' => get_post_meta($real_estate_id, 'real_estate_obj_resale', true),
+                    'finishing' => get_post_meta($real_estate_id, 'real_estate_obj_finishing', true),
+                    'status' => get_post_meta($real_estate_id, 'real_estate_obj_status', true),
+                    'balkon' => get_post_meta($real_estate_id, 'real_estate_obj_balkon', true),
+                    'house_type' => get_post_meta($real_estate_id, 'real_estate_obj_house_type', true),
+                    'building_type' => get_post_meta($real_estate_id, 'real_estate_obj_building_type', true),
+                    'material' => get_post_meta($real_estate_id, 'real_estate_obj_material', true),
+                    'area' => get_post_meta($real_estate_id, 'real_estate_obj_area', true),
+                    'room_count' => get_post_meta($real_estate_id, 'real_estate_obj_room_count', true),
+                    'floor_count' => get_post_meta($real_estate_id, 'real_estate_obj_floor_count', true),
+                    'all_area' => get_post_meta($real_estate_id, 'real_estate_obj_all_area', true),
+                    'kitchen_area' => get_post_meta($real_estate_id, 'real_estate_obj_kitchen_area', true),
+                    'live_area' => get_post_meta($real_estate_id, 'real_estate_obj_live_area', true),
+                    'description' => get_post_meta($real_estate_id, 'real_estate_obj_description', true),
+                    'price' => get_post_meta($real_estate_id, 'real_estate_obj_price', true),
+                    'kontakts' => get_post_meta($real_estate_id, 'real_estate_obj_kontakts', true),
 
 
 
-                //image & content
-                if (!empty($real_estate_thumbnail) || !empty($real_estate_content)) {
 
-                    $html .= '<p class="image_content">';
-                    if (!empty($real_estate_thumbnail)) {
-                        $html .= $real_estate_thumbnail;
-                    }
-                    if (!empty($real_estate_content)) {
-                        $html .=  $real_estate_content;
-                    }
 
-                    $html .= '</p>';
-                }
 
-                //phone & email output
-                if (!empty($real_estate_phone) || !empty($real_estate_email)) {
-                    $html .= '<p class="phone_email">';
-                    if (!empty($real_estate_phone)) {
-                        $html .= '<b>Phone: </b>' . $real_estate_phone . '</br>';
-                    }
-                    if (!empty($real_estate_email)) {
-                        $html .= '<b>Email: </b>' . $real_estate_email;
-                    }
-                    $html .= '</p>';
-                }
+                ]);
+                $i++;
+
+
+                // //image & content
+                // if (!empty($real_estate_thumbnail) || !empty($real_estate_content)) {
+
+                //     $html .= '<p class="image_content">';
+                //     if (!empty($real_estate_thumbnail)) {
+                //         $html .= $real_estate_thumbnail;
+                //     }
+                //     if (!empty($real_estate_content)) {
+                //         $html .=  $real_estate_content;
+                //     }
+
+                //     $html .= '</p>';
+                // }
+
+                // //phone & email output
+                // if (!empty($real_estate_phone) || !empty($real_estate_email)) {
+                //     $html .= '<p class="phone_email">';
+                //     if (!empty($real_estate_phone)) {
+                //         $html .= '<b>Phone: </b>' . $real_estate_phone . '</br>';
+                //     }
+                //     if (!empty($real_estate_email)) {
+                //         $html .= '<b>Email: </b>' . $real_estate_email;
+                //     }
+                //     $html .= '</p>';
+                // }
 
                 //apply the filter after the main content, before it ends 
                 //(lets third parties hook into the HTML output to output data)
                 $html = apply_filters('real_estate_after_main_content', $html);
 
                 //readmore
-                $html .= '<a class="link" href="' . $real_estate_permalink . '" title="view location">View Location</a>';
-                $html .= '</section>';
+                // $html .= '<a class="link" href="' . $real_estate_permalink . '" title="view location">View Location</a>';
+                // $html .= '</section>';
             }
-            $html .= '</article>';
-            $html .= '<div class="cf"></div>';
+            // $html .= '</article>';
+            // $html .= '<div class="cf"></div>';
         }
         $html .= '<div id="map"></div>';
-        $html .= '<div id="floating-panel">';
 
-        $html .= '<input id="place-id" type="text" value="ChIJd8BlQ2BZwokRAFUEcm_qrcA" />';
-        $html .= '<input id="submit" type="button" value="Get Address for Place ID" />';
-        $html .= '</div>';
         $test = get_option('akimov_api_key');
+        // var_dump($data);
+        // echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 
     ?>
         <script async src="https://maps.googleapis.com/maps/api/js?key=<?php echo $test; ?>&callback=initMap">
         </script>
 
         <script>
-            // Initialize the map.
-            var data = [{
-                    name: 'Санкт-Петербург',
-                    description: 'Наб. реки Смоленки, 5-7',
-                    lat: 59.948940,
-                    lon: 30.261825,
-                },
-                {
-                    name: 'Москва',
-                    description: 'Студенческая ул., 15',
-                    lat: 55.742730,
-                    lon: 37.551128,
-                },
-                {
-                    name: 'Самара',
-                    description: 'ул. Скляренко, 26',
-                    lat: 53.216539,
-                    lon: 50.160825,
-                },
-                {
-                    name: 'Омск',
-                    description: 'ул. Лермонтова, 63',
-                    lat: 54.982917,
-                    lon: 73.396128,
-                },
-            ];
+            // Initialize the map
+            var data = <?php echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK); ?>;
+
+
+            // loop through all markers and create bounds
+            // each(map.markers, function(i, marker) {
+
+
+
+            // });
 
             function initMap() {
+                var bounds = new google.maps.LatLngBounds();
+
                 const map = new google.maps.Map(document.getElementById("map"), {
                     zoom: 10,
                     center: {
                         lat: 55.74,
                         lng: 37.55
                     },
+                    disableDefaultUI: true,
+                    // panControl: false,
+                    zoomControl: true,
+                    // mapTypeControl: false,
+                    scaleControl: true,
+                    // streetViewControl: false,
+                    // overviewMapControl: false,
+                    // rotateControl: false,
+                    // screenControl: false
 
                 });
+                map.markers = [];
                 for (var i = 0; i < data.length; i++) {
+
                     var item = data[i];
                     var marker = new google.maps.Marker({
                         position: {
@@ -836,26 +866,110 @@ class Akimov_RealEstate
                             lng: item.lon
                         },
                         map: map,
-                       // icon: getMarkerIcon(),
+                        // icon: getMarkerIcon(),
                         id: i
                     });
+                    var latlng = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
+
+                    bounds.extend(latlng);
+                    map.markers.push(marker);
                     marker.addListener('click', function() {
+                        var sh = document.getElementsByClassName('site-header');
+                        console.log(sh);
+                        for (var i = 0; i < sh.length; i++) {
+
+                            var elem = sh[i];
+                            elem.style.zIndex = -1;
+                            console.log(elem);
+
+                        }
+                        console.log();
                         var marker = this;
                         // center map to marker
                         var objPoint = new google.maps.LatLng(
                             marker.position.lat(),
                             marker.position.lng()
                         );
-                        map.setZoom(11);
-                        map.setCenter(objPoint);
+                        map.setZoom(18);
+                        // map.setCenter(objPoint);
                         var item = data[marker.id];
-                        var contentString = '<div class="map__window" style="color: #000"><div class="map__window-title">' + item.name + '</div><p class="map__window-description">' + item.description + '</p></div>';
+                        var contentString = '<div class="map__window" style="color: #000"><div class="map__window-title">' +
+                            item.name +
+                            '</div><p class="map__window-description">' +
+                            item.description +
+                            '</p></div><div class="thumbnail"><img src="' +
+                            item.thumbnail +
+                            '"></div><div class="type"><p>Тип недвижимости: ' +
+                            item.type +
+                            '</p></div><div class="dest"><p>Назначение: ' +
+                            item.dest +
+                            '</p></div><div class="floor"><p>Этаж: ' +
+                            item.floor +
+                            '</p></div><div class="resale"><p>Первичка/вторичка: ' +
+                            item.resale +
+                            '</p></div><div class="finishing"><p>Отделка: ' +
+                            item.finishing +
+                            '</p></div><div class="status"><p>Статус: ' +
+                            item.status +
+                            '</p></div><div class="balkon"><p>Балкон/Лоджия: ' +
+                            item.balkon +
+                            '</p></div><div class="house_type"><p>Тип дома: ' +
+                            item.house_type +
+                            '</p></div><div class="building_type"><p>Тип постройки: ' +
+                            item.building_type +
+                            '</p></div><div class="material"><p>Материал стен: ' +
+                            item.material +
+                            '</p></div><div class="area"><p>Площадь участка: ' +
+                            item.area +
+                            '</p></div><div class="room_count"><p>Количество комнат: ' +
+                            item.room_count +
+                            '</p></div><div class="floor_count"><p>Количество этажей: ' +
+                            item.floor_count +
+                            '</p></div><div class="all_area"><p>Общая площадь: ' +
+                            item.all_area +
+                            '</p></div><div class="kitchen_area"><p>Площадь кухни: ' +
+                            item.kitchen_area +
+                            '</p></div><div class="live_area"><p>Жилая площадь: ' +
+                            item.live_area +
+                            '</p></div><div class="price"><p>Цена: ' +
+                            item.price +
+                            '</p></div><div class="kontakts"><p>Контакты: ' +
+                            item.kontakts +
+                            '</p></div>';
                         infoWindow = new google.maps.InfoWindow({
-                            content: contentString
+                            content: contentString,
+
+
+
                         });
+                        infoWindow.setOptions({
+                            maxWidth: 100 + "vw",
+                            minWidth: 100 + "vw",
+                            zIndex: 999999,
+
+                        });
+
                         infoWindow.open(map, marker);
+
+                        infoWindow.addListener("closeclick", () => {
+                            map.fitBounds(bounds);
+                            var sh = document.getElementsByClassName('site-header');
+                            console.log(sh);
+                            for (var i = 0; i < sh.length; i++) {
+
+                                var elem = sh[i];
+                                elem.style.zIndex = 1;
+                                console.log(elem);
+
+                            }
+                        });
                     });
+
+
                 }
+
+
+
 
                 const styles = {
                     default: [],
@@ -1130,6 +1244,24 @@ class Akimov_RealEstate
                 map.setOptions({
                     styles: styles["hide"]
                 });
+
+
+
+                // vars
+
+
+                // only 1 marker?
+                if (map.markers.length == 1) {
+                    // set center of map
+                    map.setCenter(bounds.getCenter());
+                    map.setZoom(17);
+                } else {
+                    // fit to bounds
+                    map.fitBounds(bounds);
+
+                }
+
+
 
             }
 
