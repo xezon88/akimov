@@ -9,6 +9,7 @@
   class cdrBotConnector {
     private $base;
 
+
     public function __construct () {
       // add_action('wp_enqueue_scripts', [$this, 'loadPublicScripts']);
       // add_action('admin_enqueue_scripts', [$this, 'loadAdminScripts']);
@@ -20,6 +21,7 @@
       add_action('rest_api_init', [$this, 'initSaveCardAPI']);
     }
 
+
     public function loadPublicScripts () {
       wp_register_style('botConnCSS', plugins_url('/templates/styles.css', __FILE__));
       wp_register_script('botConnJS', plugins_url('/templates/scripts.js', __FILE__));
@@ -28,6 +30,7 @@
       wp_enqueue_script('botConnJS');
     }
 
+
     public function loadAdminScripts () {
       wp_register_script('botConnAdminJS', plugins_url('./admin/scripts.js', __FILE__));
       wp_register_style('botConnAdminCSS', plugins_url('./admin/styles.css', __FILE__));
@@ -35,6 +38,7 @@
       wp_enqueue_script('botConnAdminJS');
       wp_enqueue_style('botConnAdminCSS');
     }
+
 
     public function addMenu () {
       add_menu_page('botConnector', 'botConnector', 'read', 'botConnector', [$this, 'loadAdminPage']);
@@ -45,6 +49,7 @@
       $shortCode = file_get_contents( plugins_url('./templates/calc.php', __FILE__) );
       return $shortCode;
     }
+
 
     public function getRequestHistory() {
       $query = "SELECT * FROM `wp_cdr_temp`";
@@ -64,17 +69,22 @@
 
 
     public function initSaveCardAPI () {
-      $namespace = 'cdr-connector/v1';
-      $route = '/save-card/';
-
-      $paramsArr = [
+      $saveCardParams = [
         'methods' => 'POST',
         'callback' => [$this, 'saveCard'],
         'args' => [],
         'permission_callback' => function () {return true;},
       ];
 
-      register_rest_route($namespace, $route, $paramsArr);
+      $showHistoryParams = [
+        'methods' => 'POST',
+        'callback' => [$this, 'showReqHistory'],
+        'args' => [],
+        'permission_callback' => function () {return true;},
+      ];
+
+      register_rest_route('cdr-connector/v1', '/save-card/', $saveCardParams);
+      register_rest_route('cdr-connector/v1', '/show-reqs/', $showHistoryParams);
     }
 
 
@@ -101,10 +111,20 @@
       print_r('</pre>');
     }
 
+
+    public function showReqHistory() {
+      $history = $this -> getRequestHistory();
+      print_r('<pre>');
+      print_r($history);
+      print_r('</pre>');
+    }
+
+    
     public function loadAdminPage () {
       $adminTemplate = file_get_contents( plugins_url('./admin/index.php', __FILE__) );
       print($adminTemplate);
     }
+
 
     public function parseCard($cardString) {
       $card = explode(',', $cardString);
