@@ -7,14 +7,17 @@
   defined('ABSPATH') or die();
 
   class cdrBotConnector {
+    private $base;
+
     public function __construct () {
       // add_action('wp_enqueue_scripts', [$this, 'loadPublicScripts']);
       // add_action('admin_enqueue_scripts', [$this, 'loadAdminScripts']);
       // add_action('admin_menu', [$this, 'addMenu']);
       // add_action('wp_ajax_saveCard', [$this, 'saveCard']);
-
-      add_action('rest_api_init', [$this, 'initSaveCardAPI']);
       // add_shortcode( 'mathCalc', [$this, 'loadShortCodeTemplate']);
+      
+      $this -> base = new wpdb(DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
+      add_action('rest_api_init', [$this, 'initSaveCardAPI']);
     }
 
     public function loadPublicScripts () {
@@ -43,12 +46,9 @@
       return $shortCode;
     }
 
-
-    public function getRequestHistory()
-    {
-      $wpdb = new wpdb(DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
+    public function getRequestHistory() {
       $query = "SELECT * FROM `wp_cdr_temp`";
-      $res = $wpdb -> get_results($query);
+      $res = $this -> base -> get_results($query);
       return $res;
     }
 
@@ -57,10 +57,8 @@
     {
       $reqParams = $req -> get_params();
       $reqJSON = json_encode($reqParams);
-
-      $wpdb = new wpdb(DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
-      $query = "INSERT INTO `wp_cdr_temp` VALUES (1, '$reqJSON')";
-      $res = $wpdb -> get_results($query);
+      $query = "INSERT INTO `wp_cdr_temp` VALUES ( '', '$reqJSON')";
+      $res = $this -> base -> get_results($query);
       return $res;
     }
 
@@ -100,7 +98,7 @@
 
       print('<pre>');
       print_r($reqHistory);
-      print('</pre>');
+      print_r('</pre>');
     }
 
     public function loadAdminPage () {
