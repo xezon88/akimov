@@ -4,6 +4,7 @@ class cdrConnectorPlugin {
     console.log('HELLO FROM CONNECTOR')
   }
 
+  
   async getCards () {
     let res, codeBlock
 
@@ -17,6 +18,7 @@ class cdrConnectorPlugin {
     console.log(codeBlock);
   }
 
+
   async sendAJAX (action, data) {
     let body, response, responseHandler
 
@@ -26,6 +28,7 @@ class cdrConnectorPlugin {
     await jQuery.post(ajaxurl, body, res => response = res)
     return response 
   }
+
 
   createEl (tag, classes = [], innerText = '') {
     let node = document.createElement(tag)

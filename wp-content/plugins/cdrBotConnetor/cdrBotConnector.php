@@ -44,6 +44,27 @@
     }
 
 
+    public function getRequestHistory()
+    {
+      $wpdb = new wpdb(DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
+      $query = "SELECT * FROM `wp_cdr_temp`";
+      $res = $wpdb -> get_results($query);
+      return $res;
+    }
+
+
+    public function saveRequest($req)
+    {
+      $reqParams = $req -> get_params();
+      $reqJSON = json_encode($reqParams);
+
+      $wpdb = new wpdb(DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
+      $query = "INSERT INTO `wp_cdr_temp` VALUES (1, '$reqJSON')";
+      $res = $wpdb -> get_results($query);
+      return $res;
+    }
+
+
     public function initSaveCardAPI () {
       $namespace = 'cdr-connector/v1';
       $route = '/save-card/';
@@ -74,19 +95,18 @@
       }
 
       // $post_id = wp_insert_post($cardsArr[0]);
+      $saveRes = $this -> saveRequest($request);
+      $reqHistory = $this -> getRequestHistory();
 
       print('<pre>');
-      print_r($request);
-      print_r($cardsArr);
+      print_r($reqHistory);
       print('</pre>');
     }
-
 
     public function loadAdminPage () {
       $adminTemplate = file_get_contents( plugins_url('./admin/index.php', __FILE__) );
       print($adminTemplate);
     }
-
 
     public function parseCard($cardString) {
       $card = explode(',', $cardString);
@@ -114,7 +134,6 @@
       $resultArr['post_content'] = '';
       $resultArr['post_aouthor'] = 1;
       $resultArr['post_status'] = 'publish';
-
 
       return $resultArr;
     }
